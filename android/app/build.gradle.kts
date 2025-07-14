@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // O Flutter Gradle Plugin deve ser aplicado após os plugins do Android e Kotlin.
+
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -21,8 +21,6 @@ android {
 
     signingConfigs {
         create("release") {
-            // TODO: Adicione aqui as configurações da sua chave de assinatura real
-            // para publicar seu aplicativo na Google Play.
         }
     }
 
@@ -36,7 +34,6 @@ android {
 
     buildTypes {
         getByName("release") {
-            // CORREÇÃO: Usar 'isMinifyEnabled' e 'isShrinkResources'
             isMinifyEnabled = true
             isShrinkResources = true
 
